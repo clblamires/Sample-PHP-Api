@@ -16,7 +16,7 @@ if( !$key ) {
 }
 
 // DBClass - defines an instance of connecting to MySQL
-class DBClass {
+class Database {
     // set your variables here!
     private $host = "localhost";
     private $user = "root";

@@ -11,12 +11,12 @@
 header("Content-Type: application/json; charset=UTF-8");
 
 // include necessary files
-require_once("../dbclass.php");
+require_once("../database/db.php");
 require_once("../entities/employees.php");
 
 // instantiate the database and get a connection
 // note: this will fail if the URL 'key' parameter is nonexistent or is incorrect
-$db = new DBClass();
+$db = new Database();
 $connection = $db->getConnection();
 
 // ---------------------------------------------------------------------------------
@@ -36,7 +36,6 @@ $count = $statement->rowCount();
 $employees = array();
 $employees["body"] = array();
 $employees["count"] = $count;
-
 
 // loop through the results and create a new item in our array
 if( $count > 0 ){

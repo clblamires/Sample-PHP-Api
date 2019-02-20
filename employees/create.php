@@ -14,12 +14,12 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 // include necessary files
-require_once("../dbclass.php");
+require_once("../database/db.php");
 require_once("../entities/employees.php");
 
 // instantiate the database and get a connection
 // note: this will fail if the URL 'key' parameter is nonexistent or is incorrect
-$db = new DBClass();
+$db = new Database();
 $connection = $db->getConnection();
 
 
