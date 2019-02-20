@@ -44,6 +44,7 @@ if( !$data ){
 $employee->firstname = $data->firstname;
 $employee->lastname = $data->lastname;
 $employee->password = md5($data->password);
+// SECURITY WARNING: I'm using md5 as a quick way to encrypt, but it is NOT a good solution! Use a salt!
 $employee->archive = 0;
 
 // attempt to create the new record
