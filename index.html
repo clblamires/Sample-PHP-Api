@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API Testing</title>
+
+    <!-- AngularJS and app script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- UIkit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+</head>
+<body ng-app="testApp">
+
+
+    <div class="uk-container" ng-controller="testCtrl">
+        <h1>UI Kit test</h1>
+
+        <ul>
+            <li ng-repeat="employee in employees">
+                {{ employee.firstname }} {{ employee.lastname }} <button ng-click="delete(employee.employee_id)">Delete</button>
+            </li>
+        </ul>
+        <p>Total employees: {{ num_employees }}</p>
+
+        <h2>Add New Employee</h2>
+        <form novalidate class="uk-flex">
+            <!-- firstname, lastname, password -->
+            <input type="text" class="uk-input" ng-model="new.firstname" placeholder="firstname">
+            <input type="text" class="uk-input" ng-model="new.lastname" placeholder="lastname">
+            <input type="password" class="uk-input" ng-model="new.password" placeholder="password">
+            <button class="uk-button uk-button-primary" ng-click="submitForm()">Submit</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
