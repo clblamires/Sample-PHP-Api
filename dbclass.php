@@ -9,7 +9,7 @@
 
 // check API key first
 // you might store this API key in a database and draw from that, instead of hardcoding it here
-$key = isset($_GET['key']) && $_GET['key'] = "YOUR_API_KEY" ? true : false;
+$key = isset($_GET['key']) && $_GET['key'] = "c903f90d6078bd641d5eca794deb1d99" ? true : false;
 if( !$key ) {
     http_response_code(404);
     die();
